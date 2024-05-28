@@ -1,10 +1,25 @@
+
+let totalUsers = JSON.parse(localStorage.getItem('totalUsers')) || [];
+let validUsers = JSON.parse(localStorage.getItem('validUsers')) || [];
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
 const validationForm = document.getElementById('validationForm');
+
+
 
 validationForm.addEventListener('submit', function(e) {
     e.preventDefault();
 
     const candidateId = document.getElementById('candidateId').value;
     const certificateFile = document.getElementById('certificateFile').files[0];
+
+    totalUsers.push(candidateId);
+    console.log(totalUsers);
+    localStorage.setItem('totalUsers', JSON.stringify(totalUsers));
+
 
     // Perform form validation
     if (!candidateId) {
@@ -20,9 +35,8 @@ validationForm.addEventListener('submit', function(e) {
     fetch('/candidate-data/')
     .then(response => response.json())
     .then(data => {
-        console.log('hello haii');
         console.log(data);
-        const details = data.candidates
+        const details = data.candidate
         let candidateFound = false
         for (let index = 0; index < details.length; index++) {
             if (candidateId == details[index].candidate_ID){
@@ -31,9 +45,11 @@ validationForm.addEventListener('submit', function(e) {
             }   
         }
         if (candidateFound) {
-            window.location.href = '/dashboard';
+            validUsers.push(candidateId)
+            localStorage.setItem('validUsers', JSON.stringify(validUsers));
+            // window.location.href = '/valid-data';
         } else {
-            window.location.href = '/home';
+            // window.location.href = '/invalid-data';
         }
     })
     .catch(error => {
@@ -61,5 +77,10 @@ validationForm.addEventListener('submit', function(e) {
 //     .catch(error => {
 //         console.error('Error:', error);
 //         alert('An error occurred during certificate validation.');
+
     });
+});
+
+
+export { totalUsers, validUsers };
 
