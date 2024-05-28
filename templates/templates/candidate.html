@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Details</title>
+</head>
+<body>
+    <h1>Candidate Details</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Candidate ID</th>
+                <th>Name</th>
+                <th>University</th>
+                <th>Degree</th>
+                <th>Year of Passing</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for candidate in candidates %}
+            <tr>
+                <td>{{ candidate.candidate_ID }}</td>
+                <td>{{ candidate.candidate_name }}</td>
+                <td>{{ candidate.University_name }}</td>
+                <td>{{ candidate.degree }}</td>
+                <td>{{ candidate.YOP }}</td>
+                <td>{{ candidate.status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Validation Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/dash.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#"><i class="fas fa-certificate"></i> Certificate Validation</a>
+            </div>
+            <div class="nav-links">
+                <a href="/">home</a>
+                <a href="/feedback">feedback</a>
+                <a href="/help">help</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <h1>Welcome, HR Manager</h1>
+            <div class="dashboard-cards">
+                <div class="card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Total Certificates</h3>
+                    <p id = 'total-certificate'></p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Validated Certificates</h3>
+                    <p id ='valid-certificate'></p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-times-circle"></i>
+                    <h3>Invalid Certificates</h3>
+                    <p id = 'invalid-certificate'></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="validation-options">
+            <h2>Validation Options</h2>
+            <div class="option-cards">
+                <div class="option-card">
+                    <i class="fas fa-upload"></i>
+                    <h3>Upload Certificate</h3>
+                    <p>Validate a single certificate by uploading it.</p>
+                    <a type = "module" href="/submit-forms" class="btn">Upload</a>
+                </div>
+               
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Certificate Validation System. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="../static/js/dash.js"></script>
+</body>
+</html>

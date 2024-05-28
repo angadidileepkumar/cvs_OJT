@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Validation System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/home.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#"><i class="fas fa-certificate"></i> Certificate Validation</a>
+            </div>
+            <div class="nav-links">
+                <a href="{% url 'aboutus' %}">about US</a>
+                <a href="{% url 'login' %}">login</a>
+                <a href="{% url 'help' %}">help</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Validate Certificates Effortlessly</h1>
+                <p>Our powerful system streamlines the certificate validation process, ensuring authenticity and integrity.</p>
+                <a href="/login" class="btn">Get Started</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <i class="fas fa-check-circle"></i>
+                <h3>Instant Verification</h3>
+                <p>Validate certificates in real-time with our advanced verification algorithms.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-lock"></i>
+                <h3>Secure and Reliable</h3>
+                <p>Our system employs industry-leading security measures to safeguard your data.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-file-alt"></i>
+                <h3>Comprehensive Reports</h3>
+                <p>Generate detailed reports for auditing and record-keeping purposes.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Certificate Validation System. All rights reserved.</p>
+    </footer>
+
+    <script type="module"  src="/templates/static/js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!-- templates/validation_rejected.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Validation - Rejected</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8d7da;
+            color: #721c24;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            border: 1px solid #f5c6cb;
+            background-color: #f8d7da;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .container h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .container p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .container .icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        .nav-links {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 100px;
+            
+            }
+
+        .nav-links .element {
+        margin: 0 50px; /* Adjust margin as needed */
+        background-color:aqua;
+        width: 150px;
+        height: 25px;
+        color: black;
+
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">❌</div>
+        <h1>Certificate Validation Rejected</h1>
+        <p>Unfortunately, your certificate could not be validated.</p>
+        <p>Please check the certificate details and try again.</p>
+        <p>If you believe this is an error, please contact support.</p>
+        
+    </div>
+    <div class="nav-links">
+            
+        <div><button  class="element" onclick="location.href='/dashboard'">dashboard</button></div>
+       <div><button class="element" onclick="location.href='/submit-forms'">upload again</button></div> 
+        <!-- <a class="element" href="/submit-forms">upload again</a> -->
+
+    </div>
+</body>
+</html>
