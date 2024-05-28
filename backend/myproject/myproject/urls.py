@@ -30,7 +30,7 @@ urlpatterns = [
     path('invalid-data/', views.invalid, name = 'invalidForm'),
     path('about-us/', views.aboutUs, name = 'aboutus'),
     path('help/', views.help, name = 'help'),
-    path('feedback/', views.feedback, name = 'help'),
+    path('feedback/', views.feedback, name = 'feedback'),
 
 ]
 

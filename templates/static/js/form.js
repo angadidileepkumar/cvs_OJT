@@ -47,9 +47,9 @@ validationForm.addEventListener('submit', function(e) {
         if (candidateFound) {
             validUsers.push(candidateId)
             localStorage.setItem('validUsers', JSON.stringify(validUsers));
-            // window.location.href = '/valid-data';
+            window.location.href = '/valid-data';
         } else {
-            // window.location.href = '/invalid-data';
+            window.location.href = '/invalid-data';
         }
     })
     .catch(error => {
