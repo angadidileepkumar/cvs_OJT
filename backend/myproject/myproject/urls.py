@@ -16,7 +16,7 @@ Including another URLconf
 # myproject/urls.py
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from myapp import views
 
 urlpatterns = [
@@ -31,7 +31,7 @@ urlpatterns = [
     path('about-us/', views.aboutUs, name = 'aboutus'),
     path('help/', views.help, name = 'help'),
     path('feedback/', views.feedback, name = 'feedback'),
-
+    path('', include('myapp.urls')),
 ]
 
 
